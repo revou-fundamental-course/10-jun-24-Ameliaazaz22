@@ -1,5 +1,3 @@
-// js/script.js
-
 // Function to convert Celsius to Fahrenheit
 function convertToFahrenheit() {
     const celsiusInput = document.getElementById('celciusInput').value;
@@ -9,9 +7,9 @@ function convertToFahrenheit() {
     }
     
     const celsius = parseFloat(celsiusInput);
-    const fahrenheit = (celsius * 9/5) + 32;
+    const fahrenheit = (celsius * 9 / 5) + 32;
     document.getElementById('fahrenheitInput').value = fahrenheit.toFixed(2);
-    document.getElementById('calculationSteps').value = ${celsius} * 9/5 + 32 = ${fahrenheit.toFixed(2)};
+    document.getElementById('calculationSteps').value = `${celsius} * 9/5 + 32 = ${fahrenheit.toFixed(2)}`;
 }
 
 // Function to reset all fields
@@ -30,7 +28,7 @@ function reverseConversion() {
     }
 
     const fahrenheit = parseFloat(fahrenheitInput);
-    const celsius = (fahrenheit - 32) * 5/9;
+    const celsius = (fahrenheit - 32) * 5 / 9;
     document.getElementById('celciusInput').value = celsius.toFixed(2);
-    document.getElementById('calculationSteps').value = (${fahrenheit} - 32) * 5/9 = ${celsius.toFixed(2)};
+    document.getElementById('calculationSteps').value = `(${fahrenheit} - 32) * 5/9 = ${celsius.toFixed(2)}`;
 }
