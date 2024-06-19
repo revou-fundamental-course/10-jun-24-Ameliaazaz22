@@ -7,6 +7,11 @@ function convertToFahrenheit() {
     }
     
     const celsius = parseFloat(celsiusInput);
+    if (isNaN(celsius)) {
+        alert('Masukkan nilai numerik yang valid.');
+        return;
+    }
+
     const fahrenheit = (celsius * 9 / 5) + 32;
     document.getElementById('fahrenheitInput').value = fahrenheit.toFixed(2);
     document.getElementById('calculationSteps').value = `${celsius} * 9/5 + 32 = ${fahrenheit.toFixed(2)}`;
@@ -28,6 +33,11 @@ function reverseConversion() {
     }
 
     const fahrenheit = parseFloat(fahrenheitInput);
+    if (isNaN(fahrenheit)) {
+        alert('Masukkan nilai numerik yang valid.');
+        return;
+    }
+
     const celsius = (fahrenheit - 32) * 5 / 9;
     document.getElementById('celciusInput').value = celsius.toFixed(2);
     document.getElementById('calculationSteps').value = `(${fahrenheit} - 32) * 5/9 = ${celsius.toFixed(2)}`;
